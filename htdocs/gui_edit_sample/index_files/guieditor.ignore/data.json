@@ -1,0 +1,15 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "YASS:media/c-media",
+      "fields": {}
+     }
+    ]
+   }
+  }
+ }
+}
