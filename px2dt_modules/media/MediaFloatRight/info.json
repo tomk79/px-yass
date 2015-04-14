@@ -1,0 +1,8 @@
+{
+	"name": "Media float left",
+	"sample_data":[
+		{
+			"data":{"modId":"YASS:media/MediaFloatLeft","fields":{"modifiers":"","href":"/","thumb":{"resKey":"79bf77c2076253f7f114b7e1319ccd99","path":"http://dummyimage.com/64x64/cccccc/666.png&amp;text=img(可変)"},"alt":"altテキスト","heading":"Heading","main":[{"modId":"YASS:text/md","fields":{"md_src":"ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。\n\n- ここは、テキスト本文部分です。\n- ここは、テキスト本文部分です。\n- ここは、テキスト本文部分です。\n- ここは、テキスト本文部分です。\n- ここは、テキスト本文部分です。\n\nここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。"}}]}}
+		}
+	]
+}
