@@ -1,0 +1,18 @@
+{
+    "name": "tomk79/px2-yass",
+    "description": "Pickles 2 に、YASSモジュールを追加します。",
+    "keywords": ["pickles"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomoya Koyanagi",
+            "email": "tomk79@gmail.com"
+        }
+    ],
+    "repositories": [
+    ],
+    "require": {
+    },
+    "require-dev": {
+    }
+}
