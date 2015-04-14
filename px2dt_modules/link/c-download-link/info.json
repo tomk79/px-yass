@@ -1,0 +1,8 @@
+{
+	"name": "ダウンロードリンク",
+	"sample_data":[
+		{
+			"data":{"modId":"YASS:link/c-download-link","fields":{"href":"/index.html","text":"ダウンロードリンク"}}
+		}
+	]
+}

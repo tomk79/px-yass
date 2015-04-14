@@ -1,0 +1,8 @@
+{
+	"name": "ページ内リンク(下向き)",
+	"sample_data":[
+		{
+			"data":{"modId":"YASS:link/c-down-link","fields":{"href":"/index.html","text":"ページ内リンク"}}
+		}
+	]
+}

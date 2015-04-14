@@ -1,5 +1,6 @@
 
 
+<!-- autoindex -->
 
 <?php
 

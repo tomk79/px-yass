@@ -1,0 +1,8 @@
+{
+	"name": "エラー表示",
+	"sample_data":[
+		{
+			"data":{"modId":"YASS:text/c-error-text","fields":{"text":"この文言はエラー表示です。"}}
+		}
+	]
+}

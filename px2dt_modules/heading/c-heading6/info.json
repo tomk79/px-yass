@@ -1,0 +1,9 @@
+{
+	"name": "c-heading6",
+	"sample_data":[
+		{
+			"title":"sample",
+			"data": {"modId":"YASS:heading/c-heading6","fields":{"heading":"Heading 6"}}
+		}
+	]
+}

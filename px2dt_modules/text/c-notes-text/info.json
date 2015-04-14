@@ -1,0 +1,8 @@
+{
+	"name": "注釈表示",
+	"sample_data":[
+		{
+			"data":{"modId":"YASS:text/c-notes-text","fields":{"text":"※この文言は注釈表示です。"}}
+		}
+	]
+}

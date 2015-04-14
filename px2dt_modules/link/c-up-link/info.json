@@ -1,0 +1,8 @@
+{
+	"name": "ページ内リンク(上向き)",
+	"sample_data":[
+		{
+			"data":{"modId":"YASS:link/c-up-link","fields":{"href":"/index.html","text":"ページ内リンク"}}
+		}
+	]
+}
