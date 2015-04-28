@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* css sprite */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -443,32 +444,22 @@ dl dd {
 .c-notes-text {
   color: #999999; }
 
-.c-btn {
+.c-btn, .c-btn--short, .c-btn--long, .c-btn--full {
   display: inline-block;
   border-radius: 4px;
   padding: 0 1em;
   color: #fff;
   text-align: center;
   line-height: 42px;
-  background: #cccccc;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.c-btn.is-disabled {
+.is-disabled.c-btn, .is-disabled.c-btn--short, .is-disabled.c-btn--long, .is-disabled.c-btn--full {
   opacity: 0.5;
   filter: alpha(opacity=50); }
-
-.c-btn--sub {
-  background: #a3a3a3; }
-
-.c-btn--action {
-  background: #2e2e2e; }
-
-.c-btn--strong {
-  background: #a81d1b; }
 
 .c-btn--short {
   width: 20%; }
@@ -478,6 +469,9 @@ dl dd {
 
 .c-btn--full {
   width: 100%; }
+
+.c-btn {
+  background: #cccccc; }
 
 .c-list-notes {
   margin-left: 1em;
@@ -566,6 +560,9 @@ dl dd {
 .c-media--bottom {
   vertical-align: bottom; }
 
+.c-media--float > :first-child {
+  margin-top: 0; }
+
 .c-media--float .c-media__left {
   float: left;
   display: block; }
@@ -579,14 +576,14 @@ dl dd {
   overflow: visible;
   display: block; }
 
-.c-embed-responsive {
+.c-embed-responsive--4by3, .c-embed-responsive--16by9 {
   position: relative;
   display: block;
   height: 0;
   padding: 0;
   overflow: hidden; }
 
-.c-embed-responsive .c-embed-responsive__item, .c-embed-responsive iframe, .c-embed-responsive embed, .c-embed-responsive object, .c-embed-responsive video {
+.c-embed-responsive--4by3 iframe, .c-embed-responsive--16by9 iframe, .c-embed-responsive--4by3 embed, .c-embed-responsive--16by9 embed, .c-embed-responsive--4by3 object, .c-embed-responsive--16by9 object, .c-embed-responsive--4by3 video, .c-embed-responsive--16by9 video {
   position: absolute;
   top: 0;
   left: 0;
@@ -595,29 +592,38 @@ dl dd {
   width: 100%;
   border: 0; }
 
-.c-embed-responsive--16by9 {
-  padding-bottom: 56.25%; }
+.c-embed-responsive__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0; }
 
 .c-embed-responsive--4by3 {
   padding-bottom: 75%; }
 
-.c-table {
+.c-embed-responsive--16by9 {
+  padding-bottom: 56.25%; }
+
+.c-table, .c-table--bordered {
   width: 100%;
   max-width: 100%; }
 
-.c-table > thead > tr > th, .c-table > thead > tr > td, .c-table > tbody > tr > th, .c-table > tbody > tr > td, .c-table > tfoot > tr > th, .c-table > tfoot > tr > td {
+.c-table > thead > tr > th, .c-table--bordered > thead > tr > th, .c-table > thead > tr > td, .c-table--bordered > thead > tr > td, .c-table > tbody > tr > th, .c-table--bordered > tbody > tr > th, .c-table > tbody > tr > td, .c-table--bordered > tbody > tr > td, .c-table > tfoot > tr > th, .c-table--bordered > tfoot > tr > th, .c-table > tfoot > tr > td, .c-table--bordered > tfoot > tr > td {
   padding: 8px;
   vertical-align: top;
   border-top: 1px solid #ddd; }
 
-.c-table > thead > tr > th {
+.c-table > thead > tr > th, .c-table--bordered > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd; }
 
-.c-table > caption + thead > tr:first-child > th, .c-table > caption + thead > tr:first-child > td, .c-table > colgroup + thead > tr:first-child > th, .c-table > colgroup + thead > tr:first-child > td, .c-table > thead:first-child > tr:first-child > th, .c-table > thead:first-child > tr:first-child > td {
+.c-table > caption + thead > tr:first-child > th, .c-table--bordered > caption + thead > tr:first-child > th, .c-table > caption + thead > tr:first-child > td, .c-table--bordered > caption + thead > tr:first-child > td, .c-table > colgroup + thead > tr:first-child > th, .c-table--bordered > colgroup + thead > tr:first-child > th, .c-table > colgroup + thead > tr:first-child > td, .c-table--bordered > colgroup + thead > tr:first-child > td, .c-table > thead:first-child > tr:first-child > th, .c-table--bordered > thead:first-child > tr:first-child > th, .c-table > thead:first-child > tr:first-child > td, .c-table--bordered > thead:first-child > tr:first-child > td {
   border-top: 0; }
 
-.c-table > tbody + tbody {
+.c-table > tbody + tbody, .c-table--bordered > tbody + tbody {
   border-top: 2px solid #ddd; }
 
 .c-table--bordered {
@@ -629,7 +635,7 @@ dl dd {
 .c-table--bordered > thead > tr > th, .c-table--bordered > thead > tr > td {
   border-bottom-width: 2px; }
 
-.c-form-control {
+input.c-form-control, textarea.c-form-control {
   display: block;
   width: 100%;
   height: 34px;
@@ -644,9 +650,6 @@ dl dd {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-textarea.c-form-control {
-  height: auto; }
-
 .c-checkbox, .c-radio {
   position: relative;
   display: block;
@@ -660,6 +663,11 @@ textarea.c-form-control {
   font-weight: normal;
   cursor: pointer; }
 
+.c-checkbox input[type="checkbox"], .c-checkbox-inline input[type="checkbox"], .c-radio input[type="radio"], .c-radio-inline input[type="radio"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px; }
+
 .c-checkbox-inline, .c-radio-inline {
   position: relative;
   display: inline-block;
@@ -669,31 +677,18 @@ textarea.c-form-control {
   font-weight: normal;
   cursor: pointer; }
 
-.c-checkbox input[type="checkbox"], .c-radio input[type="checkbox"], .c-checkbox-inline input[type="checkbox"], .c-radio-inline input[type="checkbox"] {
-  position: absolute;
-  margin-left: -20px;
-  margin-top: 4px; }
-
-input[type="checkbox"][disabled], input[type="checkbox"].is-disabled {
+input[type="checkbox"][disabled], input[type="checkbox"].is-disabled, .c-checkbox.is-disabled label, .c-checkbox-inline.is-disabled, input[type="radio"][disabled], input[type="radio"].is-disabled, .c-radio.is-disabled label {
   cursor: not-allowed; }
 
-.c-checkbox-inline.is-disabled, .is-disabled.c-radio-inline {
-  cursor: not-allowed; }
+textarea.c-form-control {
+  height: auto; }
 
-.c-checkbox.is-disabled label, .is-disabled.c-radio label {
-  cursor: not-allowed; }
-
-.c-radio input[type="radio"], .c-radio-inline input[type="radio"] {
-  position: absolute;
-  margin-left: -20px;
-  margin-top: 4px; }
-
-input[type="radio"][disabled], input[type="radio"].is-disabled {
-  cursor: not-allowed; }
-
-.c-radio.disabled label {
-  cursor: not-allowed; }
-
+/* Sample
+$sprites_icons_retina_map_kana: sprite-map("icon/kana*/
+/*.png");
+$sprites_icons_retina_map_img: sprite-url($sprites_icons_retina_map_kana);
+@include output-css-from-sprite($sprites_icons_retina_map_kana, 2);
+*/
 /**
  * [utility] 文字組み
  */
