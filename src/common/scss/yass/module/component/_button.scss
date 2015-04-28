@@ -1,0 +1,97 @@
+// placeholder selector
+%def-btn {
+	@include inline-block;
+	border-radius: 4px;
+	padding: 0 1em;
+	color: #fff;
+	text-align: center;
+	line-height: 42px;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	// State
+	&.is-disabled {
+		opacity: 0.5;
+	}
+}
+%def-btn--short {
+	width: 20%;
+}
+%def-btn--long {
+	width: 60%;
+}
+%def-btn--full {
+	width: 100%;
+}
+
+// 通常ボタン
+//
+// Markup:
+// <a class="c-btn" href="#" role="button">Link</a>
+// <button class="c-btn" type="submit">Button</button>
+// <input class="c-btn" type="button" value="Input">
+// <input class="c-btn" type="submit" value="Submit">
+//
+// Styleguide 5.1
+
+// 通常ボタン 非活性
+//
+// 非活性時はis-disabledを付与すること。<br>
+// is-disabledは以下の通常ボタン全てで使用することができる。
+//
+// Markup:
+// <button class="c-btn is-disabled" type="submit" disabled>Button</button>
+// <input class="c-btn is-disabled" type="button" value="Input" disabled>
+// <input class="c-btn is-disabled" type="submit" value="Submit" disabled>
+//
+// Styleguide 5.2
+.c-btn {
+	@extend %def-btn;
+	background: #cccccc;
+}
+
+// 通常ボタン ショート
+//
+// Markup:
+// <a class="c-btn--short" href="#" role="button">Link</a>
+// <button class="c-btn--short" type="submit">Button</button>
+// <input class="c-btn--short" type="button" value="Input">
+// <input class="c-btn--short" type="submit" value="Submit">
+//
+// Styleguide 5.3
+.c-btn--short {
+	@extend %def-btn;
+	@extend %def-btn--short;
+}
+
+// 通常ボタン ロング
+//
+// Markup:
+// <a class="c-btn--long" href="#" role="button">Link</a>
+// <button class="c-btn--long" type="submit">Button</button>
+// <input class="c-btn--long" type="button" value="Input">
+// <input class="c-btn--long" type="submit" value="Submit">
+//
+// Styleguide 5.4
+.c-btn--long {
+	@extend %def-btn;
+	@extend %def-btn--long;
+}
+
+// 通常ボタン フル
+//
+// Markup:
+// <a class="c-btn--full" href="#" role="button">Link</a>
+// <button class="c-btn--full" type="submit">Button</button>
+// <input class="c-btn--full" type="button" value="Input">
+// <input class="c-btn--full" type="submit" value="Submit">
+//
+// Styleguide 5.5
+.c-btn--full {
+	@extend %def-btn;
+	@extend %def-btn--full;
+}
+
+
+

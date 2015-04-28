@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YASS: Living Styleguide</title>
+	<meta name="viewport" content="width=device-width">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet'>
+	<link rel="stylesheet" href="public/kss.css">
+	<link rel="stylesheet" href="../common/css/style.css">
+</head>
+<body>
+<div class="kss-wrapper">
+	<div id="kss-nav" class="kss-nav">
+		<header class="kss-header">
+			<h1>YASS</h1>
+		</header>
+		<aside>
+			<nav>
+				<ul>
+					<li class="mbm"><a href="index.html">0.0: Overview</a></li>
+					<li class="mbm"><a href="section-1.html">1.0: Grid</a></li>
+					<li class="mbm"><a href="section-2.html">2.0: Heading</a></li>
+					<li class="mbm"><a href="section-3.html">3.0: Link</a></li>
+					<li class="mbm"><a href="section-4.html">4.0: Text</a></li>
+					<li class="mbm"><a href="section-5.html">5.0: Button</a></li>
+					<li class="mbm"><a href="section-6.html">6.0: List</a></li>
+					<li class="mbm"><a href="section-7.html">7.0: Media</a></li>
+					<li class="mbm"><a href="section-8.html">8.0: Embeds</a></li>
+					<li class="mbm"><a href="section-9.html">9.0: Table</a></li>
+					<li class="mbm"><a href="section-10.html">10.0: Form</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</div>
+	<div id="kss-main" role="main" class="kss-main">
+		<article class="kss-content">
+			<h1 class="kss-title"><span class="kss-ref">1.0</span> - Grid</h1>
+				<p><a href="http://getbootstrap.com/css/#grid">Bootstrapのグリッドシステム</a>をほぼそのまま流用している。<br>
+横幅の合計を12カラムとして数え、使用するパーツごとに何カラム分使って配置するかを指定する。<br>
+l-row(行)、とl-col-**などのカラム数を入れて分割します。<br>
+デバイスの画面サイズに応じて表示を別々に制御することもできます。</p>
+
+				 			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">1.1</span> - Large grid</h1>
+				<div class="kss-box mbm"><p>l-col-lg-*にて設定する。<br>
+デスクトップ・ファーストでメディアクエリを記述している為、Large gridは全デバイスに適用されます。</p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><div class="l-row">
+<div class="l-col-lg-4">l-col-lg-4</div>
+<div class="l-col-lg-4">l-col-lg-4</div>
+<div class="l-col-lg-4">l-col-lg-4</div>
+</div><!-- /.l-row -->
+<div class="l-row">
+<div class="l-col-lg-3">l-col-lg-3</div>
+<div class="l-col-lg-6">l-col-lg-3</div>
+<div class="l-col-lg-3">l-col-lg-3</div>
+</div><!-- /.l-row -->
+<div class="l-row">
+<div class="l-col-lg-6">l-col-lg-6</div>
+<div class="l-col-lg-6">l-col-lg-6</div>
+</div><!-- /.l-row --></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-4&quot;&gt;l-col-lg-4&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4&quot;&gt;l-col-lg-4&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4&quot;&gt;l-col-lg-4&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;
+&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-3&quot;&gt;l-col-lg-3&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-6&quot;&gt;l-col-lg-3&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-3&quot;&gt;l-col-lg-3&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;
+&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-6&quot;&gt;l-col-lg-6&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-6&quot;&gt;l-col-lg-6&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">1.2</span> - Medium Grid</h1>
+				<div class="kss-box mbm"><p>l-col-md-*にて設定する。<br>
+ミディアムサイズの画面で表示を切り替えたい場合に使用されます。</p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><div class="l-row">
+<div class="l-col-lg-4 l-col-md-6">l-col-lg-4 l-col-md-6</div>
+<div class="l-col-lg-4 l-col-md-6">l-col-lg-4 l-col-md-6</div>
+<div class="l-col-lg-4 l-col-md-12">l-col-lg-4 l-col-md-12</div>
+</div><!-- /.l-row --></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-md-6&quot;&gt;l-col-lg-4 l-col-md-6&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-md-6&quot;&gt;l-col-lg-4 l-col-md-6&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-md-12&quot;&gt;l-col-lg-4 l-col-md-12&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">1.3</span> - Small Grid</h1>
+				<div class="kss-box mbm"><p>l-col-sm-*にて設定する。<br>
+スモールサイズの画面で表示を切り替えたい場合に使用されます。</p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><div class="l-row">
+<div class="l-col-lg-4 l-col-sm-6">l-col-lg-4 l-col-sm-6</div>
+<div class="l-col-lg-4 l-col-sm-6">l-col-lg-4 l-col-sm-6</div>
+<div class="l-col-lg-4 l-col-sm-12">l-col-lg-4 l-col-sm-12</div>
+</div><!-- /.l-row --></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-sm-6&quot;&gt;l-col-lg-4 l-col-sm-6&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-sm-6&quot;&gt;l-col-lg-4 l-col-sm-6&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-sm-12&quot;&gt;l-col-lg-4 l-col-sm-12&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</pre>
+				</div>
+				
+			</section>
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var sidebarAdjust = function () {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+		});
+	</script>
+</div>
+</body>
+</html>

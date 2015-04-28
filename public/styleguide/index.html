@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YASS: Living Styleguide</title>
+	<meta name="viewport" content="width=device-width">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet'>
+	<link rel="stylesheet" href="public/kss.css">
+	<link rel="stylesheet" href="../common/css/style.css">
+</head>
+<body>
+<div class="kss-wrapper">
+	<div id="kss-nav" class="kss-nav">
+		<header class="kss-header">
+			<h1>YASS</h1>
+		</header>
+		<aside>
+			<nav>
+				<ul>
+					<li class="mbm"><a href="index.html">0.0: Overview</a></li>
+					<li class="mbm"><a href="section-1.html">1.0: Grid</a></li>
+					<li class="mbm"><a href="section-2.html">2.0: Heading</a></li>
+					<li class="mbm"><a href="section-3.html">3.0: Link</a></li>
+					<li class="mbm"><a href="section-4.html">4.0: Text</a></li>
+					<li class="mbm"><a href="section-5.html">5.0: Button</a></li>
+					<li class="mbm"><a href="section-6.html">6.0: List</a></li>
+					<li class="mbm"><a href="section-7.html">7.0: Media</a></li>
+					<li class="mbm"><a href="section-8.html">8.0: Embeds</a></li>
+					<li class="mbm"><a href="section-9.html">9.0: Table</a></li>
+					<li class="mbm"><a href="section-10.html">10.0: Form</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</div>
+	<div id="kss-main" role="main" class="kss-main">
+		<article class="kss-content">
+			<p><strong>YASS</strong>は、<a href="http://tomk79.github.io/FESS/">FESS</a>に<a href="https://smacss.com/ja">SMACSS</a>、<a href="http://bem.info/">BEM</a>のコンセプトを取り入れたCSSの基本定義集です。</p>
+<h2 id="install">Install</h2>
+<h3 id="gem">gem</h3>
+<p><a href="http://sass-lang.com/install">Sass &gt;=3.4</a>.を使用します。
+Updateまたはinstallを行ってください。</p>
+<pre><code>$ gem update sass
+</code></pre><pre><code>$ gem install sass
+</code></pre><h3 id="npm">npm</h3>
+<p><a href="https://www.npmjs.com/">npm</a>を使用して<a href="https://nodejs.org/">Node.js</a>のモジュールをインストールします。</p>
+<pre><code>$ npm install
+</code></pre><h3 id="tasks">Tasks</h3>
+<p><a href="http://gulpjs.com/">gulp</a>を使用します。</p>
+<pre><code>$ gulp
+</code></pre><h1 id="css">CSS</h1>
+<h2 id="-">カテゴライズ</h2>
+<p>SMACSSのカテゴリー分類を拝借し次の5つのカテゴリーで構成されます。</p>
+<ol>
+<li>Base - reset/normalize/base...</li>
+<li>Layout<ol>
+<li>Structure - header/main/sideber/footer...</li>
+<li>Grid - grid...</li>
+</ol>
+</li>
+<li>Module<ol>
+<li>Component - heading/button/link/...</li>
+<li>Utility - clearfix/display/margin...</li>
+</ol>
+</li>
+<li>Theme - theme...</li>
+<li>State</li>
+</ol>
+<h3 id="base">Base</h3>
+<p>Reset.cssやNormalize.cssなどを用いたブラウザのデフォルトスタイルの初期化や、プロジェクトにおける基本的なスタイルを定義します。
+ページの下地としての全体の背景や、基本的なタイポグラフィなどが該当します。
+Baseの中にクラスを指定したスタイルを定義してはいけません。</p>
+<h3 id="layout">Layout</h3>
+<h4 id="1-structure">1. Structure</h4>
+<p>ページを構成するヘッダーやメインのコンテンツエリア、サイドバーやフッターといったプロジェクト共通のコンテナーブロックのスタイルを定義します。</p>
+<h4 id="2-grid">2. Grid</h4>
+<p><a href="http://getbootstrap.com/css/#grid">Bootstrapのグリッドシステム</a>を拝借。</p>
+<h3 id="module">Module</h3>
+<p>プロジェクトにおける繰り返されるビジュアルパターンをすべて<strong>Module</strong>と定義します。</p>
+<p>YASSでのモジュールは、さらに次のレイヤーに分けられます。</p>
+<h4 id="1-component">1. Component</h4>
+<p>再利用できるパターンとして、小さな単位のモジュールを定義します。</p>
+<h4 id="2-utility">2. Utility</h4>
+<p>わずかなスタイルの調整のための便利クラスなどを定義します。</p>
+<p>clearfixテクニックのためのルールセットが定義されているヘルパークラスも、このレイヤーに含めます。</p>
+<h3 id="theme">Theme</h3>
+<p>Themeはサイトの表面的なデザイン変更を行います。</p>
+<p>また単一の装飾のスタイルなどもテーマとして定義します。</p>
+<h3 id="state">State</h3>
+<p>Stateは、モジュールやレイアウトを拡張し、特定の状態によってスタイルを上書きします。</p>
+<p>状態の切り替えはJavaScriptで制御するため、状態ルールはJavaScriptに依存すると言えるでしょう。</p>
+<h2 id="-">命名規則</h2>
+<h3 id="mindbemding">MindBEMding</h3>
+<p><a href="http://bem.info/">BEM</a>システムのシンタックスである、<strong>Block</strong>、<strong>Element</strong>、<strong>Modifier</strong>に分類して構成される規則を採用します。</p>
+<p>YASSでは、オリジナルのBEMのシンタックスではなく、<a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a>
+のアイデアを基本的にそのまま取り入れています。</p>
+<pre><code class="lang-css">.block {}
+.block__element {}
+.block--modifier {}
+</code></pre>
+<p>JavaScriptで操作されるような「状態」を表すようなModifierについては、SMACSSの<strong>State</strong>パターンの命名を拝借し、&#39;is-*&#39;プレフィックスを付与し、<code>.is-active</code>というようにすることもできます。</p>
+<pre><code class="lang-html">&lt;button class=&quot;c-button is-active&quot;&gt;Save&lt;/button&gt;
+</code></pre>
+<pre><code class="lang-css">.c-button { ... }
+.c-button.is-active { ... }
+</code></pre>
+<p>このアイデアを採用する場合の原則として、<code>.is-active</code>そのものにルールを持たせるのは<strong>禁止</strong>します。これは<code>.is-active</code>そのものが持つルールが、
+他のモジュールのModifierのスタイルを汚染してしまうのを防ぐためです。</p>
+<h3 id="-">プレフィックス</h3>
+<p>役割を明確にするためにプレフィックスをつけることを推奨します。</p>
+<ul>
+<li>Layout - <code>.l-*</code></li>
+<li>Component - <code>.c-*</code></li>
+<li>Utility   - <code>.u-*</code></li>
+<li>Theme   - <code>.t-*</code></li>
+<li>State   - <code>.is-*</code></li>
+</ul>
+<h2 id="-">ファイル・ディレクトリ構成</h2>
+<pre><code>yass
+├── _variables.scss
+├── _mixins.scss
+├── mixins
+│   ├── _opacity.scss
+│   ├── _mediaqueries.scss
+│   └── ...
+├── base
+│   ├── _normalize.scss
+│   ├── _base.scss
+│   └── ...
+├── layout
+│   ├── structure
+│   │   ├── _header.scss
+│   │   ├── _footer.scss
+│   │   ├── _main.scss
+│   │   ├── _sidebar.scss
+│   │   └── ...
+│   └── grid
+│       └── _grid.scss
+├─── module
+│   ├── component
+│   │   ├── _button.scss
+│   │   ├── _dialog.scss
+│   │   ├── _grid.scss
+│   │   ├── _media.scss
+│   │   └── ...
+│   └── utility
+│       ├── _align.scss
+│       ├── _clearfix.scss
+│       ├── _margin.scss
+│       ├── _position.scss
+│       ├── _size.scss
+│       ├── _text.scss
+│       └── ...
+└── theme
+    ├── _color.scss
+    └── ...
+</code></pre><h3 id="_variables-scss">_variables.scss</h3>
+<p>プロジェクトで使用する基本的な変数が定義されているファイル。</p>
+<h3 id="_mixins-scss">_mixins.scss</h3>
+<p>各mixinファイルをincludeしたファイル。</p>
+<h3 id="mixins-">mixinsディレクトリ</h3>
+<p>各mixinファイルが格納されるディレクトリ</p>
+<h3 id="base-layout-module-theme">base、layout、module、theme</h3>
+<p>上記を参考</p>
+<p>モジュール単位でファイルを分割することによって、ページ単位またはプロジェクト単位でのモジュールの追加・削除の管理が容易になります。</p>
+<p>これらを統括するための<code>style.scss</code>のようなファイルからは次のように参照します。</p>
+<pre><code class="lang-style.scss">// ==========================================================================
+// variables mixin
+// ==========================================================================
+@import &quot;yass/_variables&quot;;
+@import &quot;yass/_mixins&quot;;
+
+// ==========================================================================
+// base
+// ==========================================================================
+@import &quot;yass/base/_normalize&quot;;
+@import &quot;yass/base/_base&quot;;
+
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Structure
+// -----------------------------------------------------------------
+@import &quot;yass/layout/structure/_header&quot;;
+@import &quot;yass/layout/structure/_footer&quot;;
+@import &quot;yass/layout/structure/_main&quot;;
+@import &quot;yass/layout/structure/_sidebar&quot;;
+
+// -----------------------------------------------------------------
+// Grid
+// -----------------------------------------------------------------
+@import &quot;yass/layout/grid/_grid&quot;;
+
+// ==========================================================================
+// Module
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+@import &quot;yass/module/component/_button&quot;;
+@import &quot;yass/module/component/_dialog&quot;;
+@import &quot;yass/module/component/_media&quot;;
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+
+@import &quot;yass/module/utility/_align&quot;;
+@import &quot;yass/module/utility/_clearfix&quot;;
+@import &quot;yass/module/utility/_margin&quot;;
+@import &quot;yass/module/utility/_position&quot;;
+@import &quot;yass/module/utility/_size&quot;;
+
+// ==========================================================================
+// Theme
+// ==========================================================================
+
+@import &quot;yass/theme/_theme&quot;;
+</code></pre>
+<h2 id="-">基本設計</h2>
+<p><a href="http://sass-lang.com/">Sass</a>のplaceholder selectorを利用(@extend)したシングルクラス設計が基本になっています。</p>
+<p>次のようなbuttonモジュールがあったとします。</p>
+<pre><code class="lang-scss">.c−button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.c-button--primary {
+  background-color: #CCAA00;
+}
+</code></pre>
+<pre><code class="lang-html">&lt;a href=&quot;#save&quot; class=&quot;c-button c-button--primary&quot;&gt;Button&lt;/a&gt;
+</code></pre>
+<p>YASSの構想では、このようなマルチクラスパターンを基本使用*せずに、次のようなextendによるシングルクラスパターンで設計していきます。</p>
+<p>*マルチクラスパターンを用いた方が柔軟な設計が可能な場合などは使用してもよい。</p>
+<pre><code class="lang-scss">%def-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.c-button {
+  @extend %def-button
+  background-color: #CCAA00;
+}
+.c-button--primary {
+  @extend %button
+  background-color: #FFCC00;
+}
+
+// Compiled
+// .c-button,.c-button-primary {
+//   display: inline-block;
+//   padding: 0.5em 1em;
+//   cursor: pointer;
+// }
+// .c-button {
+//   background-color: #CCAA00;
+// }
+// .c-button--primary {
+//   background-color: #FFCC00;
+// }
+</code></pre>
+<p>同じplaceholder selectorを継承しているクラスは基本そのクラスのModifierとして定義する。</p>
+<pre><code class="lang-html">&lt;a href=&quot;#save&quot; class=&quot;c-button&quot;&gt;Button&lt;/a&gt;
+&lt;a href=&quot;#save&quot; class=&quot;c-button-primary&quot;&gt;Button&lt;/a&gt;
+</code></pre>
+<h3 id="css-extend">CSSプリプロセッサのExtend</h3>
+<p>placeholder selectorによる@extendは、原則そのモジュールで完結する継承以外では利用を禁止します。</p>
+<p>カテゴリーやレイヤー超えてextendによる継承をおこなった場合、YASSの構成・設計は破綻し、カスケーディングルールも複雑にしてしまう可能性があるためです。</p>
+<p>以下は例外として、許容されるパターンをあげます。</p>
+<h4 id="theme-extend">ThemeによるExtend</h4>
+<pre><code class="lang-html">&lt;a href=&quot;#&quot; class=&quot;c-btn&quot;&gt;ボタン&lt;/a&gt;
+&lt;h2 class=&quot;c-heding2&quot;&gt;見出し&lt;/h2&gt;
+</code></pre>
+<pre><code class="lang-scss">%t-gradient-gray {
+  background-image: linear-gradient(top, #F2F2F2, #C9C9C9);
+}
+.c-btn {
+  @extend %t-gradient-gray
+}
+.c-heding2 {
+  @extend %t-gradient-gray
+}
+</code></pre>
+<h2 id="layout-module-theme-">Layout、Module、Themeのカスケーディング</h2>
+<p>原則として、モジュール間のカスケーディング、他のモジュールを親とするセレクタを用いたカスケーディングは<strong>禁止</strong>とします。</p>
+<pre><code class="lang-css">// Component
+.c-button {
+  ...
+}
+.c-media .c-button {
+  ...
+}
+
+// Layout
+.l-main {
+  ...
+}
+.l-main .c-button {
+  ...
+}
+</code></pre>
+<p>なぜならば、そのレイヤーにおいて、特定のモジュールに依存することなく、モジュールとして独立して再利用できるべきであり、混在させることによって他の開発者が予想しない挙動になるべきではないためです。</p>
+<p>例外として、Themeカテゴリーにおけるカスケーディング、例えば、次のようなテーマがレイアウトやComponentのモジュールを変更することは許容します。</p>
+<pre><code class="lang-css">// Layout
+#l-header {
+  width: 100%;
+}
+
+.t-layout-fixed #l-header {
+  width: 1200px;
+}
+</code></pre>
+
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var sidebarAdjust = function () {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+		});
+	</script>
+</div>
+</body>
+</html>

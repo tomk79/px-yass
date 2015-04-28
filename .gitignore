@@ -5,3 +5,6 @@ scss_cache
 /px-files/_sys/ram/
 composer.lock
 /caches/
+/.sass-cache/
+/node_modules/
+.idea

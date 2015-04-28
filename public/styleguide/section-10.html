@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YASS: Living Styleguide</title>
+	<meta name="viewport" content="width=device-width">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet'>
+	<link rel="stylesheet" href="public/kss.css">
+	<link rel="stylesheet" href="../common/css/style.css">
+</head>
+<body>
+<div class="kss-wrapper">
+	<div id="kss-nav" class="kss-nav">
+		<header class="kss-header">
+			<h1>YASS</h1>
+		</header>
+		<aside>
+			<nav>
+				<ul>
+					<li class="mbm"><a href="index.html">0.0: Overview</a></li>
+					<li class="mbm"><a href="section-1.html">1.0: Grid</a></li>
+					<li class="mbm"><a href="section-2.html">2.0: Heading</a></li>
+					<li class="mbm"><a href="section-3.html">3.0: Link</a></li>
+					<li class="mbm"><a href="section-4.html">4.0: Text</a></li>
+					<li class="mbm"><a href="section-5.html">5.0: Button</a></li>
+					<li class="mbm"><a href="section-6.html">6.0: List</a></li>
+					<li class="mbm"><a href="section-7.html">7.0: Media</a></li>
+					<li class="mbm"><a href="section-8.html">8.0: Embeds</a></li>
+					<li class="mbm"><a href="section-9.html">9.0: Table</a></li>
+					<li class="mbm"><a href="section-10.html">10.0: Form</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</div>
+	<div id="kss-main" role="main" class="kss-main">
+		<article class="kss-content">
+			<h1 class="kss-title"><span class="kss-ref">10.0</span> - Form</h1>
+				 			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">10.1</span> - Input</h1>
+				<div class="kss-box mbm"></div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><input type="text" class="c-form-control" placeholder="Text input"></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;input type=&quot;text&quot; class=&quot;c-form-control&quot; placeholder=&quot;Text input&quot;&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">10.2</span> - Textarea</h1>
+				<div class="kss-box mbm"></div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><textarea class="c-form-control" rows="3" placeholder="Textarea"></textarea></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;textarea class=&quot;c-form-control&quot; rows=&quot;3&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">10.2</span> - Checkbox</h1>
+				<div class="kss-box mbm"><p>非活性時はis-disabledを付与すること。<br></p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><div class="c-checkbox">
+<label>
+<input type="checkbox" value="">
+Option one is this and that&mdash;be sure to include why it's great
+</label>
+</div><!-- /.c-checkbox" -->
+<div class="checkbox is-disabled">
+<label>
+<input type="checkbox" value="" disabled>
+Option two is disabled
+</label>
+</div><!-- /.c-checkbox" --></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;div class=&quot;c-checkbox&quot;&gt;
+&lt;label&gt;
+&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+Option one is this and that&amp;mdash;be sure to include why it&#x27;s great
+&lt;/label&gt;
+&lt;/div&gt;&lt;!-- /.c-checkbox&quot; --&gt;
+&lt;div class=&quot;checkbox is-disabled&quot;&gt;
+&lt;label&gt;
+&lt;input type=&quot;checkbox&quot; value=&quot;&quot; disabled&gt;
+Option two is disabled
+&lt;/label&gt;
+&lt;/div&gt;&lt;!-- /.c-checkbox&quot; --&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">10.3</span> - Checkbox inline</h1>
+				<div class="kss-box mbm"><p>非活性時はis-disabledを付与すること。<br></p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><label class="c-checkbox-inline">
+<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="c-checkbox-inline">
+<input type="checkbox" id="inlineCheckbox1" value="option1"> 2
+</label>
+<label class="c-checkbox-inline is-disabled">
+<input type="checkbox" id="inlineCheckbox3" value="option3" disabled> 3
+</label></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;label class=&quot;c-checkbox-inline&quot;&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox1&quot; value=&quot;option1&quot;&gt; 1
+&lt;/label&gt;
+&lt;label class=&quot;c-checkbox-inline&quot;&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox1&quot; value=&quot;option1&quot;&gt; 2
+&lt;/label&gt;
+&lt;label class=&quot;c-checkbox-inline is-disabled&quot;&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox3&quot; value=&quot;option3&quot; disabled&gt; 3
+&lt;/label&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">10.4</span> - Radiobtn</h1>
+				<div class="kss-box mbm"><p>非活性時はis-disabledを付与すること。<br></p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><div class="c-radio">
+<label>
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+Option two can be something else and selecting it will deselect option one
+</label>
+</div>
+<div class="c-radio is-disabled">
+<label>
+<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+Option three is disabled
+</label>
+</div></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;div class=&quot;c-radio&quot;&gt;
+&lt;label&gt;
+&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+Option two can be something else and selecting it will deselect option one
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-radio is-disabled&quot;&gt;
+&lt;label&gt;
+&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&gt;
+Option three is disabled
+&lt;/label&gt;
+&lt;/div&gt;</pre>
+				</div>
+				
+			</section>
+			<section class="kss-depth-2">
+				<h1 class="kss-title"><span class="kss-ref">10.5</span> - Radiobtn inline</h1>
+				<div class="kss-box mbm"><p>非活性時はis-disabledを付与すること。<br></p>
+</div>
+				<table class="kss-mod-list">
+					<!--<tr class="kss-mod-desc-group">
+						<td class="kss-mod-desc"><p>Default styling</p></td>
+						<td class="kss-mod-name"></td>
+					</tr>-->
+					<tr class="kss-mod-example">
+						<td colspan="2"><label class="c-radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+</label>
+<label class="c-radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+</label>
+<label class="c-radio-inline is-disabled">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled> 3
+</label></td>
+					</tr>
+				</table>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html">&lt;label class=&quot;c-radio-inline&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;inlineRadioOptions&quot; id=&quot;inlineRadio1&quot; value=&quot;option1&quot;&gt; 1
+&lt;/label&gt;
+&lt;label class=&quot;c-radio-inline&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;inlineRadioOptions&quot; id=&quot;inlineRadio2&quot; value=&quot;option2&quot;&gt; 2
+&lt;/label&gt;
+&lt;label class=&quot;c-radio-inline is-disabled&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;inlineRadioOptions&quot; id=&quot;inlineRadio3&quot; value=&quot;option3&quot; disabled&gt; 3
+&lt;/label&gt;</pre>
+				</div>
+				
+			</section>
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var sidebarAdjust = function () {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+		});
+	</script>
+</div>
+</body>
+</html>
