@@ -156,7 +156,7 @@ return call_user_func( function(){
 	// config for Pickles2 Desktop Tool.
 	$conf->plugins->px2dt = new stdClass;
 	$conf->plugins->px2dt->paths_module_template = [
-		"YASS" => "../px2dt_modules/"
+		"YASS" => "../modules/"
 	];
 
 	return $conf;
