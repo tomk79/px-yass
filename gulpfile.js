@@ -5,6 +5,7 @@ var gulpkss = require('gulp-kss');
 var pleeease = require('gulp-pleeease');
 var plumber = require('gulp-plumber');
 //var spritesmith = require('gulp.spritesmith');
+var fs = require('fs');
 
 //Clean out the current documentation folder
 gulp.task('clean', function (cb) {
@@ -60,4 +61,13 @@ gulp.task('ple', ['sass'], function () {
         .pipe(gulp.dest('public/common/css/'));
 });
 
-gulp.task('default', ['clean', 'sass', 'kss', 'ple']);
+// YASSが出力したCSSをmodulesにコピー
+gulp.task('copy', ['sass','kss','ple'], function() {
+  var code = fs.readFileSync('public/common/css/style.css');
+  code = code.toString();
+  fs.writeFileSync('modules/_common/common/module.css', code );
+  // gulp.src('public/common/css/style.css')
+  //  .pipe(gulp.dest('modules/_common/common/module.css'));
+});
+
+gulp.task('default', ['clean', 'sass', 'kss', 'ple', 'copy']);
