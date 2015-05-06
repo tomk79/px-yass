@@ -11,7 +11,7 @@ return call_user_func( function(){
 
 	// paths
 	$conf->path_top = '/'; // トップページのパス(デフォルト "/")
-	$conf->path_publish_dir = null; // パブリッシュ先ディレクトリパス
+	$conf->path_publish_dir = '../public_html/'; // パブリッシュ先ディレクトリパス
 	$conf->public_cache_dir = '/caches/'; // 公開キャッシュディレクトリ
 	$conf->contents_manifesto = '/common/contents_manifesto.ignore.php'; // Contents Manifesto のパス
 
@@ -156,6 +156,7 @@ return call_user_func( function(){
 	// config for Pickles2 Desktop Tool.
 	$conf->plugins->px2dt = new stdClass;
 	$conf->plugins->px2dt->paths_module_template = [
+		"PlainHTMLElements" => "./vendor/tomk79/px2-mod-plain-html-elements/modules/",
 		"YASS" => "../modules/"
 	];
 

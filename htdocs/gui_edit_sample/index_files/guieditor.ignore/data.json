@@ -5,8 +5,35 @@
    "fields": {
     "main": [
      {
-      "modId": "YASS:media/c-media",
-      "fields": {}
+      "modId": "YASS:grid/LargeGrid_2columns",
+      "fields": {
+       "column1": [],
+       "column2": []
+      }
+     },
+     {
+      "modId": "YASS:heading/c-heading1",
+      "fields": {
+       "heading": "H1 heading"
+      }
+     },
+     {
+      "modId": "YASS:heading/c-heading2",
+      "fields": {
+       "heading": "H2 heading"
+      }
+     },
+     {
+      "modId": "YASS:heading/c-heading3",
+      "fields": {
+       "heading": "H3 heading"
+      }
+     },
+     {
+      "modId": "YASS:heading/c-heading4",
+      "fields": {
+       "heading": "H4 heading"
+      }
      }
     ]
    }

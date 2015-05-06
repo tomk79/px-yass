@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>YASSスタイルガイド | Pickles 2</title>
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+ 
+<!-- jQuery -->
+<script src="/common/scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/common/styles/bootstrap/css/bootstrap.min.css">
+<script src="/common/styles/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Contents Styles -->
+<link rel="stylesheet" href="/common/styles/contents.css" type="text/css" />
+<script src="/common/scripts/contents.js"></script>
+
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" href="/caches/p/theme/styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="/caches/p/theme/styles/theme.css">
+<style>
+
+</style>
+	</head>
+	<body>
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="/">Pickles 2</a></p>
+				<div class="theme_shouldernavi">
+<ul></ul>				</div>
+				<div class="theme_globalnavi">
+<ul><li><a href="/styleguides/yass/" class="current">YASSスタイルガイド</a></li><li><a href="/gui_edit_sample/">GUI編集サンプル</a></li></ul>
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><ul><li><a href="/">ホーム</a></li><li><span>YASSスタイルガイド</span></li></ul></div>
+						<h1>YASSスタイルガイド</h1>
+						<div class="contents">
+<!-- == autoindex == -->
+<div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
+<div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Plain_HTML_Elements">Plain HTML Elements</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_HTML_Elements">HTML Elements</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_HTML">HTML</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Plain_Text">Plain Text</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Markdown">Markdown</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Image">Image</a></li></ul></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_YASS">YASS</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_grid">grid</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Large_Grid_(2_cols)">Large Grid (2 cols)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Large_Grid_(3_cols)">Large Grid (3 cols)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Large_Grid_(4_cols)">Large Grid (4 cols)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Medium_Grid_(3_cols)">Medium Grid (3 cols)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Small_Grid_(3_cols)">Small Grid (3 cols)</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_heading">heading</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_c-heading1">c-heading1</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_c-heading2">c-heading2</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_c-heading3">c-heading3</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_c-heading4">c-heading4</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_c-heading5">c-heading5</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_c-heading6">c-heading6</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_link">link</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_別ウィンドウリンク">別ウィンドウリンク</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_ページ内リンク(下向き)">ページ内リンク(下向き)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_ダウンロードリンク">ダウンロードリンク</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_アイコン付きリンク">アイコン付きリンク</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_リンクリスト">リンクリスト</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_詳細リンクリスト">詳細リンクリスト</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_ページトップリンク">ページトップリンク</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_PDFリンク">PDFリンク</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_ページ内リンク(上向き)">ページ内リンク(上向き)</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_media">media</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Media_float_left">Media float left</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_2_Media_float_left">Media float left</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Media_left">Media left</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Media_right">Media right</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_text">text</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_エラー表示">エラー表示</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_注釈表示">注釈表示</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_HTML入力">HTML入力</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Markdown入力">Markdown入力</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_プレーンテキスト入力">プレーンテキスト入力</a></li></ul>
+</li></ul>
+</li></ul>
+</div>
+<!-- / == autoindex == -->
+
+
+<!-- =============== Package ID: PlainHTMLElements =============== -->
+
+<span id="hash_Plain_HTML_Elements"></span><h2>Plain HTML Elements</h2>
+
+<div><p>このモジュールパッケージは、HTMLドキュメントを構成するための最も基礎となるシンプルなモジュールを提供します。</p>
+</div>
+
+<!-- ----- Category ID: PlainHTML ----- -->
+
+<span id="hash_HTML_Elements"></span><h3>HTML Elements</h3>
+
+<!-- ----- Module ID: PlainHTMLElements:PlainHTML/HTML ----- -->
+
+<span id="hash_HTML"></span><h4>HTML</h4>
+
+<p>HTMLモジュールは、入力されたHTMLコードをそのままソースとして出力します。</p>
+
+<p><code>&lt;</code> や <code>"</code> などのHTML特殊文字を画面に反映したい場合は、<code>&amp;lt;</code> <code>&amp;quot;</code> のように入力してください。</p>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;main&quot;}}&amp;}</textarea></code></pre></div>
+
+<!-- ----- Module ID: PlainHTMLElements:PlainHTML/Text ----- -->
+
+<span id="hash_Plain_Text"></span><h4>Plain Text</h4>
+
+<p>Plain Text モジュールは、入力されたテキストを、HTMLに変換してそのまま画面へ表示します。</p>
+
+<p><code>&lt;</code> や <code>"</code> などのHTML特殊文字変換が適用され、改行は <code>&lt;br /&gt;</code> に変換されます。</p>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;main&quot;}}&amp;}</textarea></code></pre></div>
+
+<!-- ----- Module ID: PlainHTMLElements:PlainHTML/Markdown ----- -->
+
+<span id="hash_Markdown"></span><h4>Markdown</h4>
+
+<p>Markdown モジュールは、Markdown形式のテキストを、HTMLに変換して出力します。</p>
+
+<p>Markdown形式は、簡易な文法で構造化されたHTMLドキュメントを記述できるファイル形式です。たとえば、行の先頭を <code>##</code> で書き始めたら <code>&lt;h2&gt;</code> に変換される、<code>-</code> で書き始めたら <code>&lt;ul&gt;</code> と <code>&lt;li&gt;</code> によるリスト表現に変換されるなど、さまざまな表現方法が規定されています。</p>
+
+<p>その他の表現方法などについて詳しくは、<a href="http://ja.wikipedia.org/wiki/Markdown">Markdown</a> のドキュメントなどを参考にしてください。</p>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;markdown&quot;,&quot;name&quot;:&quot;main&quot;}}&amp;}</textarea></code></pre></div>
+
+<!-- ----- Module ID: PlainHTMLElements:PlainHTML/image ----- -->
+
+<span id="hash_Image"></span><h4>Image</h4>
+
+<p>画像要素を入力します。</p>
+
+<p>リンク先を入力して、画像リンクを作成することもできます。</p>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;,&quot;hidden&quot;:true,&quot;rows&quot;:1}}&amp;}
+{&amp;{&quot;if&quot;:{&quot;is_set&quot;:&quot;href&quot;}}&amp;}&lt;a href=&quot;{&amp;{&quot;echo&quot;:{&quot;ref&quot;:&quot;href&quot;}}&amp;}&quot;&gt;{&amp;&quot;endif&quot;&amp;}&lt;img src=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;name&quot;:&quot;image_src&quot;}}&amp;}&quot; alt=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html_attr_text&quot;,&quot;name&quot;:&quot;alt_text&quot;,&quot;rows&quot;:1}}&amp;}&quot; /&gt;{&amp;{&quot;if&quot;:{&quot;is_set&quot;:&quot;href&quot;}}&amp;}&lt;/a&gt;{&amp;&quot;endif&quot;&amp;}</textarea></code></pre></div>
+
+<!-- =============== Package ID: YASS =============== -->
+
+<span id="hash_YASS"></span><h2>YASS</h2>
+
+<!-- ----- Category ID: grid ----- -->
+
+<span id="hash_grid"></span><h3>grid</h3>
+
+<!-- ----- Module ID: YASS:grid/LargeGrid_2columns ----- -->
+
+<span id="hash_Large_Grid_(2_cols)"></span><h4>Large Grid (2 cols)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-6&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column1&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-6&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column2&quot;}}&amp;}&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:grid/LargeGrid_3columns ----- -->
+
+<span id="hash_Large_Grid_(3_cols)"></span><h4>Large Grid (3 cols)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-4&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column1&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column2&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column3&quot;}}&amp;}&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:grid/LargeGrid_4columns ----- -->
+
+<span id="hash_Large_Grid_(4_cols)"></span><h4>Large Grid (4 cols)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-3&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column1&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-3&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column2&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-3&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column3&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-3&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column4&quot;}}&amp;}&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:grid/MediumGrid_3columns ----- -->
+
+<span id="hash_Medium_Grid_(3_cols)"></span><h4>Medium Grid (3 cols)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-md-6&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column1&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-md-6&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column2&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-md-12&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column3&quot;}}&amp;}&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:grid/SmallGrid_3columns ----- -->
+
+<span id="hash_Small_Grid_(3_cols)"></span><h4>Small Grid (3 cols)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;l-row&quot;&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-sm-6&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column1&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-sm-6&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column2&quot;}}&amp;}&lt;/div&gt;
+&lt;div class=&quot;l-col-lg-4 l-col-sm-12&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;column3&quot;}}&amp;}&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.l-row --&gt;</textarea></code></pre></div>
+
+<!-- ----- Category ID: heading ----- -->
+
+<span id="hash_heading"></span><h3>heading</h3>
+
+<!-- ----- Module ID: YASS:heading/c-heading1 ----- -->
+
+<span id="hash_c-heading1"></span><h4>c-heading1</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h1 class=&quot;c-heading1&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;heading&quot;}}&amp;}&lt;/h1&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: sample</div>
+
+<script>document.write("<h1 class=\"c-heading1\">Heading 1<\/h1>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h1 class=&quot;c-heading1&quot;&gt;Heading 1&lt;/h1&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:heading/c-heading2 ----- -->
+
+<span id="hash_c-heading2"></span><h4>c-heading2</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h2 class=&quot;c-heading2&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;heading&quot;}}&amp;}&lt;/h2&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: sample</div>
+
+<script>document.write("<h2 class=\"c-heading2\">Heading 2<\/h2>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h2 class=&quot;c-heading2&quot;&gt;Heading 2&lt;/h2&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:heading/c-heading3 ----- -->
+
+<span id="hash_c-heading3"></span><h4>c-heading3</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h3 class=&quot;c-heading3&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;heading&quot;}}&amp;}&lt;/h3&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: sample</div>
+
+<script>document.write("<h3 class=\"c-heading3\">Heading 3<\/h3>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h3 class=&quot;c-heading3&quot;&gt;Heading 3&lt;/h3&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:heading/c-heading4 ----- -->
+
+<span id="hash_c-heading4"></span><h4>c-heading4</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h4 class=&quot;c-heading4&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;heading&quot;}}&amp;}&lt;/h4&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: sample</div>
+
+<script>document.write("<h4 class=\"c-heading4\">Heading 4<\/h4>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h4 class=&quot;c-heading4&quot;&gt;Heading 4&lt;/h4&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:heading/c-heading5 ----- -->
+
+<span id="hash_c-heading5"></span><h4>c-heading5</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h5 class=&quot;c-heading5&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;heading&quot;}}&amp;}&lt;/h5&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: sample</div>
+
+<script>document.write("<h5 class=\"c-heading5\">Heading 5<\/h5>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h5 class=&quot;c-heading5&quot;&gt;Heading 5&lt;/h5&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:heading/c-heading6 ----- -->
+
+<span id="hash_c-heading6"></span><h4>c-heading6</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h6 class=&quot;c-heading6&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;heading&quot;}}&amp;}&lt;/h6&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: sample</div>
+
+<script>document.write("<h6 class=\"c-heading6\">Heading 6<\/h6>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;h6 class=&quot;c-heading6&quot;&gt;Heading 6&lt;/h6&gt;</textarea></code></pre></div>
+
+<!-- ----- Category ID: link ----- -->
+
+<span id="hash_link"></span><h3>link</h3>
+
+<!-- ----- Module ID: YASS:link/c-blank-link ----- -->
+
+<span id="hash_別ウィンドウリンク"></span><h4>別ウィンドウリンク</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot; class=&quot;c-blank-link&quot; target=&quot;_blank&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<a href=\"\/index.html\" class=\"c-blank-link\" target=\"_blank\">\u5225\u30a6\u30a3\u30f3\u30c9\u30a6\u30ea\u30f3\u30af<\/a>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;/index.html&quot; class=&quot;c-blank-link&quot; target=&quot;_blank&quot;&gt;別ウィンドウリンク&lt;/a&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-down-link ----- -->
+
+<span id="hash_ページ内リンク(下向き)"></span><h4>ページ内リンク(下向き)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot; class=&quot;c-down-link&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<a href=\"\/index.html\" class=\"c-down-link\">\u30da\u30fc\u30b8\u5185\u30ea\u30f3\u30af<\/a>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;/index.html&quot; class=&quot;c-down-link&quot;&gt;ページ内リンク&lt;/a&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-download-link ----- -->
+
+<span id="hash_ダウンロードリンク"></span><h4>ダウンロードリンク</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot; class=&quot;c-download-link&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<a href=\"\/index.html\" class=\"c-download-link\">\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u30ea\u30f3\u30af<\/a>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;/index.html&quot; class=&quot;c-download-link&quot;&gt;ダウンロードリンク&lt;/a&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-icon-link ----- -->
+
+<span id="hash_アイコン付きリンク"></span><h4>アイコン付きリンク</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot; class=&quot;c-icon-link&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<a href=\"\/index.html\" class=\"c-icon-link\">\u30a2\u30a4\u30b3\u30f3\u4ed8\u304d\u30ea\u30f3\u30af<\/a>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;/index.html&quot; class=&quot;c-icon-link&quot;&gt;アイコン付きリンク&lt;/a&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-links ----- -->
+
+<span id="hash_リンクリスト"></span><h4>リンクリスト</h4>
+
+<p>特殊なHTMLコメント <code>&lt;!-- autoindex --&gt;</code> を記述すると、Pickles2 がリンクリストに置き換えます。</p>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;!-- autoindex --&gt;
+</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-more-links ----- -->
+
+<span id="hash_詳細リンクリスト"></span><h4>詳細リンクリスト</h4>
+
+<p>詳細リンクリストは、リストのネストはできません。</p>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-more-links&quot;&gt;
+&lt;ul class=&quot;c-more-links__list&quot;&gt;
+{&amp;{&quot;loop&quot;:{&quot;name&quot;:&quot;loop&quot;}}&amp;}
+&lt;li&gt;&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;&lt;/li&gt;
+{&amp;&quot;endloop&quot;&amp;}
+&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.c-more-links --&gt;
+</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<div class=\"c-more-links\">\r\n<ul class=\"c-more-links__list\">\r\n\r\n<li><a href=\"\/\">\u30ea\u30f3\u30af1<\/a><\/li>\r\n\r\n<li><a href=\"\/\">\u30ea\u30f3\u30af2<\/a><\/li>\r\n\r\n<li><a href=\"\/\">\u30ea\u30f3\u30af3<\/a><\/li>\r\n\r\n<\/ul>\r\n<\/div><!-- \/.c-more-links -->\r\n");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-more-links&quot;&gt;
+&lt;ul class=&quot;c-more-links__list&quot;&gt;
+
+&lt;li&gt;&lt;a href=&quot;/&quot;&gt;リンク1&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;/&quot;&gt;リンク2&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;/&quot;&gt;リンク3&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.c-more-links --&gt;
+</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-page-top ----- -->
+
+<span id="hash_ページトップリンク"></span><h4>ページトップリンク</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-page-top&quot;&gt;
+&lt;p&gt;&lt;a class=&quot;c-page-top__link&quot; href=&quot;#page_top&quot;&gt;ページの先頭へ戻る&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.c-page-top --&gt;
+</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<div class=\"c-page-top\">\r\n<p><a class=\"c-page-top__link\" href=\"#page_top\">\u30da\u30fc\u30b8\u306e\u5148\u982d\u3078\u623b\u308b<\/a><\/p>\r\n<\/div><!-- \/.c-page-top -->\r\n");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-page-top&quot;&gt;
+&lt;p&gt;&lt;a class=&quot;c-page-top__link&quot; href=&quot;#page_top&quot;&gt;ページの先頭へ戻る&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.c-page-top --&gt;
+</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-pdf-link ----- -->
+
+<span id="hash_PDFリンク"></span><h4>PDFリンク</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot; class=&quot;c-pdf-link&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<a href=\"\/index.html\" class=\"c-pdf-link\">PDF\u30d5\u30a1\u30a4\u30eb\u540d<\/a>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;/index.html&quot; class=&quot;c-pdf-link&quot;&gt;PDFファイル名&lt;/a&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:link/c-up-link ----- -->
+
+<span id="hash_ページ内リンク(上向き)"></span><h4>ページ内リンク(上向き)</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot; class=&quot;c-up-link&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/a&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<a href=\"\/index.html\" class=\"c-up-link\">\u30da\u30fc\u30b8\u5185\u30ea\u30f3\u30af<\/a>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;a href=&quot;/index.html&quot; class=&quot;c-up-link&quot;&gt;ページ内リンク&lt;/a&gt;</textarea></code></pre></div>
+
+<!-- ----- Category ID: media ----- -->
+
+<span id="hash_media"></span><h3>media</h3>
+
+<!-- ----- Module ID: YASS:media/MediaFloatLeft ----- -->
+
+<span id="hash_Media_float_left"></span><h4>Media float left</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media c-media--float&quot;&gt;
+&lt;div class=&quot;c-media__left {&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;select&quot;,&quot;name&quot;:&quot;modifiers&quot;,&quot;options&quot;:[
+    {&quot;value&quot;:&quot;&quot;, &quot;label&quot;:&quot;上寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--middle&quot;, &quot;label&quot;:&quot;上下中央寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--bottom&quot;, &quot;label&quot;:&quot;下寄せ&quot;}
+]}}&amp;}&quot;&gt;
+&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;name&quot;:&quot;thumb&quot;}}&amp;}&quot; alt=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html_attr_text&quot;,&quot;name&quot;:&quot;alt&quot;,&quot;rows&quot;:&quot;1&quot;}}&amp;}&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;heading&quot;,&quot;rows&quot;:1}}&amp;}&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;main&quot;}}&amp;}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<div class=\"c-media c-media--float\">\r\n<div class=\"c-media__left \">\r\n<a href=\"\/\"><img class=\"c-media__object\" src=\"http:\/\/dummyimage.com\/64x64\/cccccc\/666.png&amp;text=img(\u53ef\u5909)\" alt=\"alt\u30c6\u30ad\u30b9\u30c8\" \/><\/a>\r\n<\/div>\r\n<div class=\"c-media__body\">\r\n<p class=\"c-media__heading\">Heading<\/p>\r\n<p class=\"c-media__text\"><p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\n<ul>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<\/ul>\n\n<p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\r\n<\/p>\r\n<\/div>\r\n<\/div><!-- \/.c-media -->");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media c-media--float&quot;&gt;
+&lt;div class=&quot;c-media__left &quot;&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;http://dummyimage.com/64x64/cccccc/666.png&amp;amp;text=img(可変)&quot; alt=&quot;altテキスト&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;Heading&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:media/MediaFloatRight ----- -->
+
+<span id="hash_2_Media_float_left"></span><h4>Media float left</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media c-media--float&quot;&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;heading&quot;,&quot;rows&quot;:1}}&amp;}&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;main&quot;}}&amp;}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__right {&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;select&quot;,&quot;name&quot;:&quot;modifiers&quot;,&quot;options&quot;:[
+    {&quot;value&quot;:&quot;&quot;, &quot;label&quot;:&quot;上寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--middle&quot;, &quot;label&quot;:&quot;上下中央寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--bottom&quot;, &quot;label&quot;:&quot;下寄せ&quot;}
+]}}&amp;}&quot;&gt;
+&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;name&quot;:&quot;thumb&quot;}}&amp;}&quot; alt=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html_attr_text&quot;,&quot;name&quot;:&quot;alt&quot;,&quot;rows&quot;:&quot;1&quot;}}&amp;}&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<div class=\"c-media c-media--float\">\r\n<div class=\"c-media__body\">\r\n<p class=\"c-media__heading\">Heading<\/p>\r\n<p class=\"c-media__text\"><p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\n<ul>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<\/ul>\n\n<p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\r\n<\/p>\r\n<\/div>\r\n<div class=\"c-media__right \">\r\n<a href=\"\/\"><img class=\"c-media__object\" src=\"http:\/\/dummyimage.com\/64x64\/cccccc\/666.png&amp;text=img(\u53ef\u5909)\" alt=\"alt\u30c6\u30ad\u30b9\u30c8\" \/><\/a>\r\n<\/div>\r\n<\/div><!-- \/.c-media -->");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media c-media--float&quot;&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;Heading&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__right &quot;&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;http://dummyimage.com/64x64/cccccc/666.png&amp;amp;text=img(可変)&quot; alt=&quot;altテキスト&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:media/MediaLeft ----- -->
+
+<span id="hash_Media_left"></span><h4>Media left</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media&quot;&gt;
+&lt;div class=&quot;c-media__left {&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;select&quot;,&quot;name&quot;:&quot;modifiers&quot;,&quot;options&quot;:[
+    {&quot;value&quot;:&quot;&quot;, &quot;label&quot;:&quot;上寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--middle&quot;, &quot;label&quot;:&quot;上下中央寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--bottom&quot;, &quot;label&quot;:&quot;下寄せ&quot;}
+]}}&amp;}&quot;&gt;
+&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;name&quot;:&quot;thumb&quot;}}&amp;}&quot; alt=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html_attr_text&quot;,&quot;name&quot;:&quot;alt&quot;,&quot;rows&quot;:&quot;1&quot;}}&amp;}&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;heading&quot;,&quot;rows&quot;:1}}&amp;}&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;main&quot;}}&amp;}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<div class=\"c-media\">\r\n<div class=\"c-media__left \">\r\n<a href=\"\/\"><img class=\"c-media__object\" src=\"http:\/\/dummyimage.com\/64x64\/cccccc\/666.png&amp;text=img(\u53ef\u5909)\" alt=\"alt\u30c6\u30ad\u30b9\u30c8\" \/><\/a>\r\n<\/div>\r\n<div class=\"c-media__body\">\r\n<p class=\"c-media__heading\">Heading<\/p>\r\n<p class=\"c-media__text\"><p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\n<ul>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<\/ul>\n\n<p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\r\n<\/p>\r\n<\/div>\r\n<\/div><!-- \/.c-media -->");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media&quot;&gt;
+&lt;div class=&quot;c-media__left &quot;&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;http://dummyimage.com/64x64/cccccc/666.png&amp;amp;text=img(可変)&quot; alt=&quot;altテキスト&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;Heading&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:media/MediaRight ----- -->
+
+<span id="hash_Media_right"></span><h4>Media right</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media&quot;&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;heading&quot;,&quot;rows&quot;:1}}&amp;}&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;{&amp;{&quot;module&quot;:{&quot;name&quot;:&quot;main&quot;}}&amp;}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__right {&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;select&quot;,&quot;name&quot;:&quot;modifiers&quot;,&quot;options&quot;:[
+    {&quot;value&quot;:&quot;&quot;, &quot;label&quot;:&quot;上寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--middle&quot;, &quot;label&quot;:&quot;上下中央寄せ&quot;},
+    {&quot;value&quot;:&quot;c-media--bottom&quot;, &quot;label&quot;:&quot;下寄せ&quot;}
+]}}&amp;}&quot;&gt;
+&lt;a href=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;href&quot;,&quot;name&quot;:&quot;href&quot;}}&amp;}&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;name&quot;:&quot;thumb&quot;}}&amp;}&quot; alt=&quot;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html_attr_text&quot;,&quot;name&quot;:&quot;alt&quot;,&quot;rows&quot;:&quot;1&quot;}}&amp;}&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<div class=\"c-media\">\r\n<div class=\"c-media__body\">\r\n<p class=\"c-media__heading\">Heading<\/p>\r\n<p class=\"c-media__text\"><p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\n<ul>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<li>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/li>\n<\/ul>\n\n<p>\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002\u3053\u3053\u306f\u3001\u30c6\u30ad\u30b9\u30c8\u672c\u6587\u90e8\u5206\u3067\u3059\u3002<\/p>\n\r\n<\/p>\r\n<\/div>\r\n<div class=\"c-media__right \">\r\n<a href=\"\/\"><img class=\"c-media__object\" src=\"http:\/\/dummyimage.com\/64x64\/cccccc\/666.png&amp;text=img(\u53ef\u5909)\" alt=\"alt\u30c6\u30ad\u30b9\u30c8\" \/><\/a>\r\n<\/div>\r\n<\/div><!-- \/.c-media -->");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;div class=&quot;c-media&quot;&gt;
+&lt;div class=&quot;c-media__body&quot;&gt;
+&lt;p class=&quot;c-media__heading&quot;&gt;Heading&lt;/p&gt;
+&lt;p class=&quot;c-media__text&quot;&gt;&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;li&gt;ここは、テキスト本文部分です。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。ここは、テキスト本文部分です。&lt;/p&gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-media__right &quot;&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;img class=&quot;c-media__object&quot; src=&quot;http://dummyimage.com/64x64/cccccc/666.png&amp;amp;text=img(可変)&quot; alt=&quot;altテキスト&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.c-media --&gt;</textarea></code></pre></div>
+
+<!-- ----- Category ID: text ----- -->
+
+<span id="hash_text"></span><h3>text</h3>
+
+<!-- ----- Module ID: YASS:text/c-error-text ----- -->
+
+<span id="hash_エラー表示"></span><h4>エラー表示</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;p class=&quot;c-error-text&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/p&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<p class=\"c-error-text\">\u3053\u306e\u6587\u8a00\u306f\u30a8\u30e9\u30fc\u8868\u793a\u3067\u3059\u3002<\/p>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;p class=&quot;c-error-text&quot;&gt;この文言はエラー表示です。&lt;/p&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:text/c-notes-text ----- -->
+
+<span id="hash_注釈表示"></span><h4>注釈表示</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;p class=&quot;c-notes-text&quot;&gt;{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;text&quot;,&quot;rows&quot;:1}}&amp;}&lt;/p&gt;</textarea></code></pre></div>
+
+<div style="padding:0.5em; background:#ddd; color:#666; font-size:xx-small; margin:1em 0; border:0; border-top:1px solid #999; border-bottom:1px solid #999;">sample: Coding sample</div>
+
+<script>document.write("<p class=\"c-notes-text\">\u203b\u3053\u306e\u6587\u8a00\u306f\u6ce8\u91c8\u8868\u793a\u3067\u3059\u3002<\/p>");</script>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: sample code of &quot;Coding sample&quot;</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">&lt;p class=&quot;c-notes-text&quot;&gt;※この文言は注釈表示です。&lt;/p&gt;</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:text/html ----- -->
+
+<span id="hash_HTML入力"></span><h4>HTML入力</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;html_src&quot;}}&amp;}
+</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:text/md ----- -->
+
+<span id="hash_Markdown入力"></span><h4>Markdown入力</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;markdown&quot;,&quot;name&quot;:&quot;md_src&quot;}}&amp;}
+</textarea></code></pre></div>
+
+<!-- ----- Module ID: YASS:text/text ----- -->
+
+<span id="hash_プレーンテキスト入力"></span><h4>プレーンテキスト入力</h4>
+
+<div style="margin:2em 1em 3em; border:1px solid #ddd; padding: 0; background:#f9f9f9; color:#999; border-radius:3px;"><div style="font-size:xx-small; padding:0.3em 1em;">CODE: module template code</div><pre style="margin:0; border:none; padding: 0; background:transparent; color:inherit;"><code style="display:block; background:transparent; border:none;"><textarea style="height:12em; width:100%; border:none; background:transparent; padding: 1em; border-radius:0.5em; color:#000; font-size:small;" readonly="readonly">{&amp;{&quot;input&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;name&quot;:&quot;text_src&quot;}}&amp;}
+</textarea></code></pre></div>
+						</div>
+						<div class="theme_breadcrumb"><ul><li><a href="/">ホーム</a></li><li><span>YASSスタイルガイド</span></li></ul></div>
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+							<p><a href="/styleguides/yass/">YASSスタイルガイド</a></p>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="container">
+				<nav class="theme_megafooter_navi">
+<ul>
+<li><a href="/styleguides/yass/" class="current">YASSスタイルガイド</a></li>
+<li><a href="/gui_edit_sample/">GUI編集サンプル</a></li>
+</ul>
+				</nav>
+			</div>
+			<div class="container theme_footer_shouldernavi">
+<ul><li><a href="/">ホーム</a></li></ul>			</div>
+			<div class="container">
+				<p style="text-align:center;">Pickles 2 is made by Tomoya Koyanagi.</p>
+			</div>
+		</footer>
+	</body>
+</html>

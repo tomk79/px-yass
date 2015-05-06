@@ -6,9 +6,9 @@ __px2-yass__ は、[Pickles 2](http://pickles2.pxt.jp/) の環境に [YASS](http
 
 ## Usage - 使い方
 
-Pickles2 をセットアップする。
+### 1. Pickles2 をセットアップ
 
-composer.json に、下記を追加する。
+### 2. composer.json に追記
 
 ```
 {
@@ -24,18 +24,16 @@ composer.json に、下記を追加する。
 }
 ```
 
-`$ composer update` を実行する。
-
-`px-files/config.php` に、下記のように追加する。
+### 3. composer を更新
 
 ```
-// config for Plugins.
-$conf->plugins = new stdClass;
+$ composer update
+```
 
+### 4. px-files/config.php に追加
+
+```
 // config for Pickles2 Desktop Tool.
-$conf->plugins->px2dt = new stdClass;
-$conf->plugins->px2dt->paths_module_template = [
-	"YASS" => "./vendor/tomk79/px2-yass/modules/"
-];
+@$conf->plugins->px2dt->paths_module_template["YASS"] = "./vendor/tomk79/px2-yass/modules/";
 ```
 
