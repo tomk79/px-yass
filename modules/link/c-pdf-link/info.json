@@ -1,8 +1,5 @@
 {
 	"name": "PDFリンク",
 	"sample_data":[
-		{
-			"data":{"modId":"YASS:link/c-pdf-link","fields":{"href":"/index.html","text":"PDFファイル名"}}
-		}
 	]
 }

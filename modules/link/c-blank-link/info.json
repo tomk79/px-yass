@@ -1,8 +1,5 @@
 {
 	"name": "別ウィンドウリンク",
 	"sample_data":[
-		{
-			"data":{"modId":"YASS:link/c-blank-link","fields":{"href":"/index.html","text":"別ウィンドウリンク"}}
-		}
 	]
 }

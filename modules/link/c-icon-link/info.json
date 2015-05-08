@@ -1,8 +1,5 @@
 {
 	"name": "アイコン付きリンク",
 	"sample_data":[
-		{
-			"data":{"modId":"YASS:link/c-icon-link","fields":{"href":"/index.html","text":"アイコン付きリンク"}}
-		}
 	]
 }

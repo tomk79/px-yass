@@ -1,8 +1,5 @@
 {
 	"name": "詳細リンクリスト",
 	"sample_data":[
-		{
-			"data":{"modId":"YASS:link/c-more-links","fields":{"loop":[{"modId":"YASS:link/c-more-links","fields":{"href":"/","text":"リンク1"},"subModName":"loop"},{"modId":"YASS:link/c-more-links","fields":{"href":"/","text":"リンク2"},"subModName":"loop"},{"modId":"YASS:link/c-more-links","fields":{"href":"/","text":"リンク3"},"subModName":"loop"}]}}
-		}
 	]
 }

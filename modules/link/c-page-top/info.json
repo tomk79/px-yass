@@ -1,8 +1,5 @@
 {
 	"name": "ページトップリンク",
 	"sample_data":[
-		{
-			"data":{"modId":"YASS:link/c-page-top","fields":{}}
-		}
 	]
 }
